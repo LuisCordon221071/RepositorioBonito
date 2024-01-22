@@ -26,8 +26,9 @@ public class Radio implements IRadio {
 
     @Override
     public double[] guardarFM(double[] lista_FM, int posicion, double estacion) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'guardarFM'");
+        double[] nuevaLista= lista_FM;
+        nuevaLista[posicion]=estacion;
+        return nuevaLista;
     }
 
     @Override
