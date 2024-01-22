@@ -6,7 +6,6 @@
 
     boolean cambioBinario(boolean valor);
 
-    /* 
     int[] guardarAM(int[] lista_AM, int posicion, int estacion);
 
     double[] guardarFM(double[] lista_FM, int posicion, double estacion);
@@ -14,10 +13,6 @@
     int avanzarAM(int estacion_actual);
 
     double avanzarFM(double estacion_actual);
-    */
-
-    void encender();
-
-    void apagar();
+    
 
 }

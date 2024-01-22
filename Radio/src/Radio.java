@@ -1,9 +1,12 @@
 public class Radio implements IRadio {
 
-    private boolean encendido;
+    public boolean cambioBinario(boolean valor){
+        
+    }
 
     //Bob el constructor
 
+    /* 
     @Override
     public boolean cambioBinario(boolean valor) {
         return !valor;
@@ -26,6 +29,7 @@ public class Radio implements IRadio {
             System.out.println("La radio ya está apagada.");
         }
     }
+    */
 
 }
 
