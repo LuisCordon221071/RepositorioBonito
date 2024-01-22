@@ -12,7 +12,7 @@ public static void main(String[] args) {
      boolean Am=true;
      int opcion=0;
      int posicion=0;
-
+    
      
      System.out.println("Prenda la sonora");
     while (encendido==true) {
