@@ -47,7 +47,7 @@ public class Radio implements IRadio {
         }
 
 
-    }
+    }}
 
     @Override
     public double avanzarFM(double estacion_actual) {
@@ -65,7 +65,7 @@ public class Radio implements IRadio {
     }
 
     }
-    }
-}
+    
+
 
 
