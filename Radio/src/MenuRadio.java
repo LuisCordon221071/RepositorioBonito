@@ -22,7 +22,7 @@ public static void main(String[] args) {
         
 
         if (Am==true) {
-        System.out.println("La radio se encuentra en Am");
+        System.out.println("La radio se encuentra en AM");
         System.out.println("1) cambiar a FM");
         System.out.println("2) Avanzar emisora");
         System.out.println("3) Guardar emisora en la lista");
