@@ -16,8 +16,5 @@
     double avanzarFM(double estacion_actual);
     
 
-    void encender();
-
-    void apagar();
-
+ 
 }
