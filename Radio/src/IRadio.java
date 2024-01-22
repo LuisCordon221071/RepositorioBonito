@@ -13,6 +13,6 @@
     int avanzarAM(int estacion_actual);
 
     double avanzarFM(double estacion_actual);
-    
+
 
 }
