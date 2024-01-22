@@ -3,11 +3,15 @@ public class Radio implements IRadio {
     private boolean encendido;
     private int[] lista_AM;
     private double[] lista_FM;
+    private double estacion;
+   
+    
     //Bob el constructor
 
     public Radio(){
         this.lista_AM= new int[12];
         this.lista_FM= new double[12];
+        this.estacion= 0;
     }
     
     @Override
