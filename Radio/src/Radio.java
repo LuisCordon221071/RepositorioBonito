@@ -11,12 +11,24 @@ public class Radio implements IRadio {
     }
     
 
+    
+    /** 
+     * @param valor
+     * @return boolean
+     */
     @Override
     public boolean cambioBinario(boolean valor) {
         return !valor;
     }
 
 
+    
+    /** 
+     * @param lista_AM
+     * @param posicion
+     * @param estacion
+     * @return int[]
+     */
     @Override
     public int[] guardarAM(int[] lista_AM, int posicion, int estacion) {
        int[] nuevaLista= lista_AM;
@@ -26,8 +38,9 @@ public class Radio implements IRadio {
 
     @Override
     public double[] guardarFM(double[] lista_FM, int posicion, double estacion) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'guardarFM'");
+        double[] nuevaLista= lista_FM;
+        nuevaLista[posicion]=estacion;
+        return nuevaLista;
     }
 
     @Override
@@ -50,6 +63,7 @@ public class Radio implements IRadio {
 
 
 }
+    
 
 
 

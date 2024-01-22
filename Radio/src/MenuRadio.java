@@ -13,13 +13,11 @@ public static void main(String[] args) {
      int opcion=0;
      int posicion=0;
 
-     
+    System.out.println();
+
      System.out.println("Prenda la sonora");
     while (encendido==true) {
-       
-        
-        
-        
+
 
         if (Am==true) {
         System.out.println("La radio se encuentra en AM");
@@ -27,8 +25,8 @@ public static void main(String[] args) {
         System.out.println("2) Avanzar emisora");
         System.out.println("3) Guardar emisora en la lista");
         System.out.println("4) Seleccionar emisora");
-        System.out.println("5) Apagar la radio");
-        System.out.println("6) Mostrar estación actual");
+        System.out.println("5) Mostrar estación actual");
+        System.out.println("6) Apagar la radio");
         opcion = miScanner.nextInt();
         switch (opcion) {
             case 1:
@@ -45,7 +43,7 @@ public static void main(String[] args) {
                 System.out.println("La estación es "+estacion_actualAM+"\n");
                 break;
             case 3:
-             System.out.println("¿En qué posición quieres guardar la estación actual (1-12)?\n");
+             System.out.println("¿En qué posición quieres guardar la estación actual (0-11)?\n");
              posicion=miScanner.nextInt();
                 lista_AM= miRadio.guardarAM(lista_AM, posicion, estacion_actualAM);
                 System.out.println("Se ha guardado la estación "+lista_AM[posicion]+" en la posición "+ posicion+"\n");
@@ -57,23 +55,58 @@ public static void main(String[] args) {
                 System.out.println("Ahora está en la estación: "+estacion_actualAM);
                 break;
             case 5:
-                encendido=false;
+                System.out.println("La estación actual es: "+estacion_actualAM+"\n");
                 break;
             case 6:
-            System.out.println("La estación actual es: "+estacion_actualAM+"\n");
+                encendido=false;
                 break;
         }
-        } else {
+    }
+         else {
             System.out.println("La radio se encuentra en Fm");
             System.out.println("1) cambiar AM");
-            System.out.println("2) Cambiar emisora");
+            System.out.println("2) Avanzar emisora");
             System.out.println("3) Guardar emisora");
+            System.out.println("4) Seleccionar emisora");
+            System.out.println("5) Mostrar estación actual");
+            System.out.println("6) Apagar la radio");
+            opcion = miScanner.nextInt();
+            switch (opcion){
+                case 1:
+                    Am = miRadio.cambioBinario(Am);
+                    System.out.println("Se ha cambiado a AM\n");
+                    break;
+                case 2:
+                    if (estacion_actualFM<=107.7){
+                        estacion_actualFM= miRadio.avanzarFM(estacion_actualFM);
+                    } 
+                    else {
+                        estacion_actualFM=87.9;
+                    }
+                    System.out.println("La estación es "+estacion_actualFM+"\n");
+                    break;
+                case 3:
+                    System.out.println("¿En qué posición quieres guardar la estación actual (0-11)?\n");
+                    posicion=miScanner.nextInt();
+                        lista_FM= miRadio.guardarFM(lista_FM, posicion, estacion_actualFM);
+                        System.out.println("Se ha guardado la estación "+lista_FM[posicion]+" en la posición "+ posicion+"\n");
+                    break;
+                case 4:
+                    System.out.println("¿Qué posición de la lista quiere usar?");
+                    posicion=miScanner.nextInt();
+                    estacion_actualFM= lista_FM[posicion];
+                    System.out.println("Ahora está en la estación: "+estacion_actualFM);
+                    break;
+                case 5: 
+                    System.out.println("La estación actual es: "+estacion_actualFM+"\n");
+                    break;
+                case 6:
+                    encendido=false;
+                    break;
+            }
         }
      } if (encendido==false){
         System.out.println("La radio se ha apagado");}
-        
+
     }
 }
-
-
-    
