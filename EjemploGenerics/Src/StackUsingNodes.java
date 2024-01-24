@@ -10,32 +10,34 @@ public class StackUsingNodes implements IStack {
 
     @Override
     public int count() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'count'");
+        return size;
     }
 
     @Override
     public boolean isEmpty() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+        return head == null;
     }
 
     @Override
     public void push(int value) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'push'");
+        Node newNode = new Node(value);
+
+        if (isEmpty()){
+            head = newNode;
+            size++;
+        } else{
+
+        }
     }
 
     @Override
     public int pop() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'pop'");
+
     }
 
     @Override
     public int peek() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'peek'");
+        
     }
 
     
