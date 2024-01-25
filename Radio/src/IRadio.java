@@ -1,5 +1,14 @@
 /* Algoritmos y estructuras de datos [Sección 50]
  * Interfaz para la radio (Propuesta)
+ * 
+ * 
+ * 
+ * Estudiantes:
+ * Allen Estuardo Ramírez De Paz, 22326
+ * Luis Alberto Cordón Salguero, 221071
+ * Catedrático: Moisés Alonso
+ * Auxiliar: Joaquín Puente
+ * 
  */
 
  public interface IRadio {
