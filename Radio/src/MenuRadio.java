@@ -58,14 +58,15 @@ public static void main(String[] args) {
                 System.out.println("La estación es "+estacion_actualAM+"\n");
                 break;
             case 3:
-             System.out.println("¿En qué posición quieres guardar la estación actual (0-11)?\n");
-             posicion=miScanner.nextInt();
+             System.out.println("¿En qué posición quieres guardar la estación actual (1-12)?\n");
+             posicion=miScanner.nextInt()-1;
                 lista_AM= miRadio.guardarAM(lista_AM, posicion, estacion_actualAM);
-                System.out.println("Se ha guardado la estación "+lista_AM[posicion]+" en la posición "+ posicion+"\n");
+               int posicionreal=posicion+1;
+                System.out.println("Se ha guardado la estación "+lista_AM[posicion]+" en la posición "+ posicionreal+"\n");
                 break;
             case 4:
                 System.out.println("¿Qué posición de la lista quiere usar?");
-                posicion=miScanner.nextInt();
+                posicion=miScanner.nextInt()-1;
                 estacion_actualAM= lista_AM[posicion];
                 System.out.println("Ahora está en la estación: "+estacion_actualAM);
                 break;
@@ -101,14 +102,15 @@ public static void main(String[] args) {
                     System.out.println("La estación es "+estacion_actualFM+"\n");
                     break;
                 case 3:
-                    System.out.println("¿En qué posición quieres guardar la estación actual (0-11)?\n");
-                    posicion=miScanner.nextInt();
+                    System.out.println("¿En qué posición quieres guardar la estación actual (1-12)?\n");
+                    posicion=miScanner.nextInt()-1;
                         lista_FM= miRadio.guardarFM(lista_FM, posicion, estacion_actualFM);
-                        System.out.println("Se ha guardado la estación "+lista_FM[posicion]+" en la posición "+ posicion+"\n");
+                       int  posicionreal=posicion+1;
+                        System.out.println("Se ha guardado la estación "+lista_FM[posicion]+" en la posición "+ posicionreal+"\n");
                     break;
                 case 4:
                     System.out.println("¿Qué posición de la lista quiere usar?");
-                    posicion=miScanner.nextInt();
+                    posicion=miScanner.nextInt()-1;
                     estacion_actualFM= lista_FM[posicion];
                     System.out.println("Ahora está en la estación: "+estacion_actualFM);
                     break;
