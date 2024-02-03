@@ -1,8 +1,8 @@
-public interface IStack{
+public interface IStack<T>{
     /* Devuelve la cantidad de elementos que posee el stack */
     int count();
     boolean isEmpty();
-    void push (int value);
-    int pop();
-    int peek();
+    void push (T value);
+    T pop();
+    T peek();
 }
