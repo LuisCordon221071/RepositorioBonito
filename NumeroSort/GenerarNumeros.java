@@ -1,22 +1,24 @@
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.HashSet;
+import java.util.Set;
 
 public class GenerarNumeros {
-    private ArrayList<Integer> numerosAzar;
+    private Set<Integer> numerosAzar;
 
     public GenerarNumeros() {
-        this.numerosAzar = new ArrayList<>();
+        this.numerosAzar = new HashSet<>();
     }
 
     public void generarAzar(int cantidad) {
         Random random = new Random();
-        for (int i = 0; i < cantidad; i++) {
+        while (numerosAzar.size() < cantidad) {
             int numeroAzar = random.nextInt(10001); 
             this.numerosAzar.add(numeroAzar);
         }
     }
 
-    public ArrayList<Integer> getNumerosAzar() {
+    public Set<Integer> getNumerosAzar() {
         return this.numerosAzar;
     }
 }
