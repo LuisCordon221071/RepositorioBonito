@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -10,10 +11,16 @@ public class Sorteo {
         ShellSort shell = new ShellSort();
         ImpInv impinv = new ImpInv();
 
-        generador.generarAzar(10);
+        /*generador.generarAzar(10);
         Set<Integer> numerosGenerados = generador.getNumerosAzar();
-        GuardarNumeros.guardarNumeros(numerosGenerados, "numeros.txt");
+        GuardarNumeros.guardarNumeros(numerosGenerados, "numeros.txt");*/
 
+        GenerarNumeros generador2 = new GenerarNumeros();
+        List<Integer> numeros = generador2.generarNumerosAleatorios(3000);
+        
+        GuardarNumeros escritor = new GuardarNumeros();
+        escritor.escribirNumerosEnArchivo(numeros);
+        
         int[] arreglo = LeerTxt.leerArreglo("numeros.txt");
 
         if (arreglo != null) {
