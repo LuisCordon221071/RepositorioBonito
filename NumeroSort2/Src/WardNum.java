@@ -9,9 +9,9 @@ public class WardNum {
 
         try {
             FileWriter escritor = new FileWriter(Archivo);
-            for (int i = 1; i <= 3000; i++) {
+            for (int i = 1; i <= 10; i++) {
                 for (int j = 1; j <= i; j++) {
-                    escritor.write(Integer.toString(random.nextInt(3000) + 1) + " "); 
+                    escritor.write(Integer.toString(random.nextInt(10) + 1) + " "); 
                 }
                 escritor.write("\n"); 
             }
