@@ -1,3 +1,14 @@
+/*
+ *
+ * Algoritmos y estructuras de datos [Sección 50]
+ * Interfaz 
+ * 
+ * Luis Alberto Cordón Salguero, 221071
+ * Catedrático: Moisés Alonso
+ * Auxiliar: Joaquín Puente
+ * 
+ */
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -10,12 +21,14 @@ import java.util.Scanner;
 
 public class Sorteo {
     public static void main(String[] args) {
-        //WardNum.generarNumeros();
+        //Generar los arreglos
+        WardNum.generarNumeros();
+
+        //Guardar los arreglos
         List<int[]> arrays = new ArrayList<>();
-        
         try (BufferedReader reader = new BufferedReader(new FileReader("numeros.txt"))) {
             String line;
-            // Leer líneas
+            //Leer los arreglos
             while ((line = reader.readLine()) != null) {
                 String[] elements = line.trim().split("\\s+");
                 int[] arr = Arrays.stream(elements).mapToInt(Integer::parseInt).toArray();
@@ -25,6 +38,7 @@ public class Sorteo {
             e.printStackTrace();
         }
         
+        //Opciones
         Scanner scanner = new Scanner(System.in);
         System.out.println("¿(A)scendente o (D)escendente?");
         String orderChoice = scanner.nextLine().toUpperCase();
@@ -37,7 +51,7 @@ public class Sorteo {
         //SelectionSort a = new SelectionSort();
         //MergeSort a = new MergeSort();
         
-        // Ordenar los arreglos de manera ascendente/descendente
+        //Ordenar los arreglos de manera ascendente/descendente
         for (int[] arr : arrays) {
             if (orderChoice.equals("A")) {
                 a.SortAscendente(arr);
@@ -55,12 +69,12 @@ public class Sorteo {
             }
         }
         
-        // Imprimir los arreglos ya ordenados
+        //Imprimir los arreglos
         for (int i = 0; i < arrays.size(); i++) {
             System.out.println("Indice " + (i+1+".a") + ": " + Arrays.toString(arrays.get(i)));
         }
 
-        // Guardar los arreglos ya ordenados
+        //Guardar los arreglos ya ordenados
         try (PrintWriter writer = new PrintWriter(new FileWriter("numeros_ordenados.txt"))) {
             for (int[] arr : arrays) {
                 writer.println(Arrays.toString(arr).replace("[", "").replace("]", "").replace(",", ""));
@@ -70,8 +84,7 @@ public class Sorteo {
         }
 
         //Volver a ordenarlos
-        /*List<int[]> sortedArrays = new ArrayList<>();
-        
+        List<int[]> sortedArrays = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader("numeros_ordenados.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -83,7 +96,7 @@ public class Sorteo {
             e.printStackTrace();
         }
 
-        // Ordenar arreglos ascendente/descendente
+        //Ordenar los arreglos de manera ascendente/descendente
         for (int[] arr : sortedArrays) {
             if (orderChoice.equals("A")) {
                 a.SortAscendente(arr);
@@ -96,10 +109,10 @@ public class Sorteo {
             }
         }
 
-        // Imprimir arreglos ya ordenados
+        //Imprimir los arreglos ya ordenados
         for (int i = 0; i < sortedArrays.size(); i++) {
             System.out.println("Indice " + (i+1+".b") + ": " + Arrays.toString(sortedArrays.get(i)));
-        }*/
+        }
     
     }
 }

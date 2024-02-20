@@ -1,3 +1,14 @@
+/*
+ *
+ * Algoritmos y estructuras de datos [Sección 50]
+ * Generadora de números
+ * 
+ * Luis Alberto Cordón Salguero, 221071
+ * Catedrático: Moisés Alonso
+ * Auxiliar: Joaquín Puente
+ * 
+ */
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
