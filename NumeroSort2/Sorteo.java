@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Sorteo {
     public static void main(String[] args) {
-        WardNum.generarNumeros();
+        //WardNum.generarNumeros();
         List<int[]> arrays = new ArrayList<>();
         
         try (BufferedReader reader = new BufferedReader(new FileReader("numeros.txt"))) {
@@ -70,7 +70,7 @@ public class Sorteo {
         }
 
         //Volver a ordenarlos
-        List<int[]> sortedArrays = new ArrayList<>();
+        /*List<int[]> sortedArrays = new ArrayList<>();
         
         try (BufferedReader reader = new BufferedReader(new FileReader("numeros_ordenados.txt"))) {
             String line;
@@ -99,7 +99,7 @@ public class Sorteo {
         // Imprimir arreglos ya ordenados
         for (int i = 0; i < sortedArrays.size(); i++) {
             System.out.println("Indice " + (i+1+".b") + ": " + Arrays.toString(sortedArrays.get(i)));
-        }
+        }*/
     
     }
 }
