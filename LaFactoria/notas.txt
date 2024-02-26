@@ -1,1 +1,3 @@
-Luis Cordon, Calculo: 93, Fisica: 85, Filosofia: 87
+Luis Cordon,Fisica:90.0,
+Maria Perez,Fisica:80.0,
+Sebastian,Fisica:76.0,
