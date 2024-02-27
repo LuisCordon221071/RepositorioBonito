@@ -1,0 +1,5 @@
+Fernando,300
+Alejandro,4000
+Silvia,780
+Alejandra,1500
+Jorge,2500 

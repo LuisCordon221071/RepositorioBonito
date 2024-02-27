@@ -119,9 +119,9 @@ public class Admin extends Usuario {
 		double monto = scanner.nextDouble();
 		scanner.nextLine(); 
 	
-		try (BufferedWriter bw = new BufferedWriter(new FileWriter("pagos.txt", true))) {
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter("pagoss.txt", true))) {
 			boolean encontrado = false;
-			File archivoPagos = new File("pagos.txt");
+			File archivoPagos = new File("pagoss.txt");
 			if (archivoPagos.exists()) {
 				BufferedReader br = new BufferedReader(new FileReader(archivoPagos));
 				String linea;

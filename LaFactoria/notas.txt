@@ -1,3 +1,6 @@
 Luis Cordon,Fisica:93.0,Calculo:85,Quimica:79
 Maria Perez,Fisica:80.0,Calculo:76,Quimica:88
 Sebastian Villeda,Fisica:76.0,Calculo:91,Quimica:75
+Roberto Martinez,Fisica:64.0,Calculo:81,Quimica:82
+Ana Gil,Fisica:89.0,Calculo:78,Quimica:69
+Javier Santos,Fisica:86.0,Calculo:94,Quimica:84

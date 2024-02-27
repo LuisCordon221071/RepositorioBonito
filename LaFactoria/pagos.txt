@@ -1,2 +1,6 @@
-Luis Cordon,300.0
-esp@uvg.edu.gt,50.0
+Luis Cordon,3000
+Maria Perez,2600
+Sebastian Villeda,800
+Roberto Martinez,7600
+Ana Gil,2750
+Javier Santos,1660
