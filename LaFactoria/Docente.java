@@ -140,7 +140,7 @@ public class Docente extends Usuario {
     private void historialPagos() {
         System.out.println("Historial de pagos:");
         for (String estudiante : pagos.keySet()) {
-            System.out.println(estudiante + ": $" + pagos.get(estudiante));
+            System.out.println(estudiante + ": Q" + pagos.get(estudiante));
         }
     }
 }
