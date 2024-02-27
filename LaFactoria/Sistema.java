@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Sistema {
 	public static void main(String[] args) {
 		
-		Usuario UsuarioLog;
+Usuario UsuarioLog;
 		Login myLogin = new Login();
 		UsuarioIns factory = new UsuarioIns();
 		Scanner in = new Scanner(System.in);

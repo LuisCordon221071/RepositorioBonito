@@ -1,3 +1,3 @@
-Luis Cordon,Fisica:90.0,
-Maria Perez,Fisica:80.0,
-Sebastian,Fisica:76.0,
+Luis Cordon,Fisica:93.0,Calculo:85,Quimica:79
+Maria Perez,Fisica:80.0,Calculo:76,Quimica:88
+Sebastian Villeda,Fisica:76.0,Calculo:91,Quimica:75

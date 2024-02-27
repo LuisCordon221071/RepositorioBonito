@@ -12,7 +12,7 @@ public class Docente extends Usuario {
         this.pagos = new HashMap<>();
         this.scanner = new Scanner(System.in);
         cargarNotasDesdeArchivo("notas.txt");
-        cargarPagosDesdeArchivo("pagos.txt");
+        cargarPagosDesdeArchivo("pagoss.txt");
     }
 
     @Override
@@ -123,7 +123,7 @@ public class Docente extends Usuario {
             pagos.put(estudiante, monto);
         }
 
-        guardarPagosEnArchivo("pagos.txt");
+        guardarPagosEnArchivo("pagoss.txt");
     }
 
     private void guardarPagosEnArchivo(String archivo) {
