@@ -21,7 +21,7 @@ def proceso(env, nombre, ram, cpus):
             with cpus.request() as req_cpus:
                 yield req_cpus
                 instrucciones_a_realizar = min(instrucciones_restantes, CPU_INSTRUCCIONES)
-                yield env.timeout(1)  # Se ejecutan las instrucciones en 1 unidad de tiempo
+                yield env.timeout(1)  
                 instrucciones_restantes -= instrucciones_a_realizar
                 print(f'{nombre} ha completado {instrucciones_a_realizar} instrucciones en {env.now}')
             
@@ -54,6 +54,8 @@ ram = simpy.Container(env, init=MEMORY_CAPACITY, capacity=MEMORY_CAPACITY)
 cpus = simpy.Resource(env, capacity=NUM_CPUS)  
 env.process(llegada_procesos(env, ram, cpus))
 env.run(until=3000)
+
+
 
 
 
