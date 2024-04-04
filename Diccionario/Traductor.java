@@ -2,7 +2,7 @@ public class Traductor {
     private BinarySearchTree<String, Word> diccionario;
 
     public Traductor(String archivoDiccionario) {
-        diccionario = new BinarySearchTree<>(new WordComparator());
+        diccionario = new BinarySearchTree<>(new WordComparator("espanol"));
         cargarDiccionario(archivoDiccionario);
     }
 
@@ -10,17 +10,44 @@ public class Traductor {
         LectorDiccionario.cargarDiccionario(diccionario, archivo);
     }
 
-    public String traducir(String frase) {
+    public String traducir1(String frase) {
+        return traducir(frase, "ingles");
+    }
+
+    public String traducir2(String frase) {
+        return traducir(frase, "frances");
+    }
+
+    public String traducir3(String frase) {
+        return traducir(frase, "espanol");
+    }
+
+    private String traducir(String frase, String idiomaDestino) {
         StringBuilder traduccion = new StringBuilder();
         String[] palabras = frase.split(" ");
         for (String palabra : palabras) {
             Word traduccionPalabra = diccionario.find(palabra);
             if (traduccionPalabra != null) {
-                traduccion.append(traduccionPalabra.getEspanol()).append(" ");
+                switch (idiomaDestino) {
+                    case "ingles":
+                        traduccion.append(traduccionPalabra.getIngles()).append(" ");
+                        break;
+                    case "frances":
+                        traduccion.append(traduccionPalabra.getFrances()).append(" ");
+                        break;
+                    case "espanol":
+                        traduccion.append(traduccionPalabra.getEspanol()).append(" ");
+                        break;
+                }
             } else {
                 traduccion.append(palabra).append(" ");
             }
         }
-        return traduccion.toString().trim();
+        return traduccion.toString().trim(); 
     }
 }
+
+
+
+
+
