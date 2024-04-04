@@ -15,8 +15,7 @@ public class WordComparator implements Comparator<String> {
             case "espanol":
                 return palabra1.compareTo(palabra2);
             case "frances":
-                // Aquí debes implementar la lógica para comparar las palabras en francés
-                // return palabra1.getFrances().compareTo(palabra2.getFrances());
+                //
                 break;
             default:
                 throw new IllegalArgumentException("Idioma de destino no válido: " + idiomaDestino);
